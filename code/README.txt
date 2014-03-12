@@ -1,1 +1,0 @@
-test commit thuraya part2
