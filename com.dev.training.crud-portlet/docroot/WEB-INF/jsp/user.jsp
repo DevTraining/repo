@@ -2,9 +2,11 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
+<%@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>  
 
-
-
+<portlet:defineObjects />
+<liferay-ui:error key="name-is-required" message="Name is Required"></liferay-ui:error>  
+<liferay-ui:error key="age-is-required" message="Age is Required"></liferay-ui:error>  
 <html>
 <style type="text/css">
     .data, .data td {
@@ -36,18 +38,20 @@
             <td>
                 Username
             </td>
-            <td> <input type="text" name="<portlet:namespace />username" value="${users.username}"/></td>
+            <td><input type="text" name="<portlet:namespace />username" value="${users.username}"/></td>
+            <td><form:errors path="username" cssClass="error" /></td>
           
         </tr>
         <tr>
             <td>
                 Age
             </td>
-            <td> <input type="text" name="<portlet:namespace />age" value="${users.age}"/></td>
+            <td><input type="text" name="<portlet:namespace />age" value="${users.age}"/></td>
+            <td><form:errors path="age" cssClass="error" /></td>
         </tr>
         
         <tr>
-            <td colspan="2">
+            <td colspan="3">
                 
                 <input type="submit" value="addUser"/>
         </tr>
