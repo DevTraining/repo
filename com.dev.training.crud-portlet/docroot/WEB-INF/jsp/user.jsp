@@ -5,8 +5,8 @@
 <%@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>  
 
 <portlet:defineObjects />
-<liferay-ui:error key="name-is-required" message="Name is Required"></liferay-ui:error>  
-<liferay-ui:error key="age-is-required" message="Age is Required"></liferay-ui:error>  
+<liferay-ui:error key="username-isnot-match" message="Username should have from 10 to 15 with One Capital"></liferay-ui:error>  
+<liferay-ui:error key="age-isnot-match" message="Age is from (21 to 50)"></liferay-ui:error>  
 <html>
 <style type="text/css">
     .data, .data td {

@@ -19,6 +19,7 @@ import com.liferay.portal.kernel.util.ParamUtil;
 import com.liferay.portal.kernel.servlet.SessionErrors; 
 import com.dev.training.DBUser;
 import com.dev.training.bean.User;
+import java.util.regex.Pattern;
 
 /**
  * Spring controller which implements the Controller interface.
@@ -53,13 +54,20 @@ public class UserController{
 
              String name=ParamUtil.get(actionRequest, "username", "");  
              String age=ParamUtil.get(actionRequest, "age", ""); 
-             if(name ==null || "".equalsIgnoreCase(name)){
+             
+             
+             String usernamePattren = "((?=.*[a-z])(?=.*[A-Z]).{10,15})";
+             
+             Pattern patternUsername = Pattern.compile(usernamePattren);
+             
+             
+             if(!patternUsername.matcher(name).matches()){
             	 error = true;
-            	   SessionErrors.add(actionRequest, "name-is-required");  
+            	   SessionErrors.add(actionRequest, "username-isnot-match");  
             	  }  
-            	  if(age == null || "".equalsIgnoreCase(age) || age.equalsIgnoreCase("0")){ 
+            	  if(Integer.valueOf(age) < 21 || Integer.valueOf(age) > 50){ 
             		  error = true;
-            	   SessionErrors.add(actionRequest, "age-is-required");  
+            	   SessionErrors.add(actionRequest, "age-isnot-match");  
             	  }  
             	  if(error){
             		  this.user = users;
