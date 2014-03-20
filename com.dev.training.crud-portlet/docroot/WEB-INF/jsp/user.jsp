@@ -6,7 +6,8 @@
 
 <portlet:defineObjects />
 <liferay-ui:error key="username-isnot-match" message="Username should have from 10 to 15 with One Capital"></liferay-ui:error>  
-<liferay-ui:error key="age-isnot-match" message="Age is from (21 to 50)"></liferay-ui:error>  
+<liferay-ui:error key="age-isnot-match" message="Age is from (21 to 50)"></liferay-ui:error>
+
 <html>
 <style type="text/css">
     .data, .data td {
@@ -22,6 +23,16 @@
         color: white;
     }
 </style>
+<script type="text/javascript">
+    var specialKeys = new Array();
+    specialKeys.push(8); //Backspace
+    function IsNumeric(e) {
+        var keyCode = e.which ? e.which : e.keyCode
+        var ret = ((keyCode >= 48 && keyCode <= 57) || specialKeys.indexOf(keyCode) != -1);
+        document.getElementById("ageerror").style.display = ret ? "none" : "inline";
+        return ret;
+    }
+</script>
 <h2>User Manager</h2>
 <portlet:actionURL var="addUserURL">
     <portlet:param name="action" value="add"></portlet:param>
@@ -46,14 +57,16 @@
             <td>
                 Age
             </td>
-            <td><input type="text" name="<portlet:namespace />age" value="${users.age}"/></td>
+            <td><input type="text" id="age" name="<portlet:namespace />age" value="${users.age}"  onkeypress="return IsNumeric(event);" ondrop="return false;" onpaste="return false;"/><br/>
+            <span id="ageerror" style="color: Red; display: none">* Input digits (0 - 9)</span>
+            </td>
             <td><form:errors path="age" cssClass="error" /></td>
         </tr>
         
         <tr>
             <td colspan="3">
                 
-                <input type="submit" value="addUser"/>
+                <input type="submit" name="submit" value="addUser" />
         </tr>
     </table>
 </form:form>

@@ -38,7 +38,7 @@ public class UserController{
       @RenderMapping
       public String listUsers(Map<String, Object> map) {
     	  
-    	 System.out.println("listUsers");
+    	// System.out.println("listUsers");
          map.put("users", user);
          //DBUser.addUser(new User("Mazin", 26));
          map.put("listUsers", DBUser.getUsers());
@@ -50,7 +50,8 @@ public class UserController{
                     PortletException {
     	  boolean error=false;
              //System.out.println("result"+ParamUtil.getString(actionRequest,"users"));
-             System.out.println("name "+users.getUsername());
+             //System.out.println("name "+users.getUsername());
+            // System.out.println("age "+users.getAge());
 
              String name=ParamUtil.get(actionRequest, "username", "");  
              String age=ParamUtil.get(actionRequest, "age", ""); 
@@ -60,15 +61,17 @@ public class UserController{
              
              Pattern patternUsername = Pattern.compile(usernamePattren);
              
+            // Pattern num = Pattern.compile("Integer.valueOf(age) < 21") 
              
              if(!patternUsername.matcher(name).matches()){
             	 error = true;
             	   SessionErrors.add(actionRequest, "username-isnot-match");  
-            	  }  
-            	  if(Integer.valueOf(age) < 21 || Integer.valueOf(age) > 50){ 
-            		  error = true;
-            	   SessionErrors.add(actionRequest, "age-isnot-match");  
-            	  }  
+            	  }
+             	
+            	if(Integer.valueOf(age) < 21 || Integer.valueOf(age) > 50){ 
+            		error = true;
+            		SessionErrors.add(actionRequest, "age-isnot-match");  
+            	  }
             	  if(error){
             		  this.user = users;
             	  }else{
@@ -81,7 +84,7 @@ public class UserController{
       @ActionMapping(params = "action=delete")
       public void deleteUser(@RequestParam("username") String username,ActionRequest actionRequest,ActionResponse actionResponse, Model model) throws IOException,
                     PortletException {
-             System.out.println("result "+ username);
+             //System.out.println("result "+ username);
              DBUser.removeUser(new User(username, 0));
              user = new User();
       }
@@ -90,7 +93,7 @@ public class UserController{
       public void updateUser(@RequestParam("username") String username,ActionRequest actionRequest,ActionResponse actionResponse, Model model) throws IOException,
       PortletException {
     	  
-             System.out.println("updateUser: "+username);
+             //System.out.println("updateUser: "+username);
              user = DBUser.getUser(username);
              DBUser.removeUser(new User(username, 0));
       }
