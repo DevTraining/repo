@@ -1,0 +1,122 @@
+## ---------- Logo ---------- ##
+
+#if (($company.getLogoId() == 0) && $use_company_logo && $theme_settings.display-company-logo != true)
+	#set ($site_logo = "${images_folder}/custom/logo.png")
+	#set ($site_logo_height = 55)
+	#set ($site_logo_width = 220)
+#end
+
+
+## ---------- widgets Footer Content ---------- ##
+
+#macro( sitepages )
+<h2>
+	<span>Site Pages</span>
+</h2>
+<ul>
+	#foreach ($nav_item in $nav_items)
+		#set ($nav_item_class = "item-" + $velocityCount)
+
+		#if ($velocityCount == 1)
+			#set ($nav_item_class = $nav_item_class + " first")
+		#elseif (!$velocityHasNext)
+			#set ($nav_item_class = $nav_item_class + " last")
+		#end
+
+		#if ($nav_item.isSelected())
+			#set ($nav_item_class = $nav_item_class + " selected")
+		#end
+
+		<li class="$nav_item_class">
+			<a href="$nav_item.getURL()" $nav_item.getTarget()>
+				<span>$nav_item.icon() $nav_item.getName()</span>
+			</a>
+		</li>
+		#if ($nav_item.hasChildren())
+			#foreach ($nav_child in $nav_item.getChildren())
+				#if ($nav_child.isSelected())
+					<li class="selected sub">
+				#else
+					<li class=" sub">
+				#end
+			<a href="$nav_child.getURL()" $nav_child.getTarget()>$nav_child.getName()</a>
+			</li>
+			#end
+		#end
+	#end
+</ul>
+#end
+
+
+#if ($journalContentUtil.getContent($group_id, $theme_settings.widgets-footer-section-1-article-id, null, "$locale", $theme_display))
+	#set ($widgets-footer_section_1 = $journalContentUtil.getContent($group_id, $theme_settings.widgets-footer-section-1-article-id, null, "$locale", $theme_display))
+#elseif ($theme_settings.widgets-footer-section-1-article-id == "Site pages")
+	#set ($widgets-footer_section_1 =  "#sitepages()")
+#else
+	#set ($widgets-footer_section_1 =  $theme_settings.widgets-footer-section-1-article-id)
+#end
+
+#if ($journalContentUtil.getContent($group_id, $theme_settings.widgets-footer-section-2-article-id, null, "$locale", $theme_display))
+	#set ($widgets-footer_section_2 = $journalContentUtil.getContent($group_id, $theme_settings.widgets-footer-section-2-article-id, null, "$locale", $theme_display))
+#elseif ($theme_settings.widgets-footer-section-2-article-id == "Site pages")
+	#set ($widgets-footer_section_2 =  "#sitepages()")
+#else
+	#set ($widgets-footer_section_2 =  $theme_settings.widgets-footer-section-2-article-id)
+#end
+
+#if ($journalContentUtil.getContent($group_id, $theme_settings.widgets-footer-section-3-article-id, null, "$locale", $theme_display))
+	#set ($widgets-footer_section_3 = $journalContentUtil.getContent($group_id, $theme_settings.widgets-footer-section-3-article-id, null, "$locale", $theme_display))
+#elseif ($theme_settings.widgets-footer-section-3-article-id == "Site pages")
+	#set ($widgets-footer_section_3 =  "#sitepages()")
+#else
+	#set ($widgets-footer_section_3 =  $theme_settings.widgets-footer-section-3-article-id)
+#end
+
+#if ($journalContentUtil.getContent($group_id, $theme_settings.widgets-footer-section-4-article-id, null, "$locale", $theme_display))
+	#set ($widgets-footer_section_4 = $journalContentUtil.getContent($group_id, $theme_settings.widgets-footer-section-4-article-id, null, "$locale", $theme_display))
+#elseif ($theme_settings.widgets-footer-section-4-article-id == "Site pages")
+	#set ($widgets-footer_section_4 =  "#sitepages()")
+#else
+	#set ($widgets-footer_section_4 =  $theme_settings.widgets-footer-section-4-article-id)
+#end
+
+## ----------  Footer Content ---------- ##
+#if ($theme_settings.footer-LeftSection-Content)
+	#set ($footer-LeftSection = $theme_settings.footer-LeftSection-Content)
+#end
+#if ($theme_settings.footer-RightSection-Content)
+	#set ($footer-RightSection = $theme_settings.footer-RightSection-Content)
+#end
+
+## ----------  Dockbar transparent ---------- ##
+
+#if ($theme_settings.dockbar-transparent == true)
+	#set ($css_class = $css_class + " dockbar-transparent")
+#end
+## ----------  Hide Chat portlet ---------- ##
+
+#if ($theme_settings.display-chat == false)
+	#set ($css_class = $css_class + " Hide-chat")
+#end
+
+## ----------  Language bar ---------- ##
+#if ($theme_settings.show-language-choice==true)
+	#set ($displayLanguage = true)
+	
+	#if ($theme_settings.language-displayStyle=="Flags")
+		#set ($languageDisplayStyle = 0)
+	#elseif ($theme_settings.language-displayStyle=="Drop Down")
+		#set ($languageDisplayStyle = 3)
+	#elseif ($theme_settings.language-displayStyle=="Long Text")
+		#set ($languageDisplayStyle = 1)
+	#else 
+		#set ($languageDisplayStyle = 2)
+	#end
+#end
+
+## ----------  Show Search portlet bar ---------- ##
+#if ($theme_settings.show-search-portlet==true)
+	#set ($showSearchPortelt = true)
+#else
+	#set ($showSearchPortelt = false)
+#end

@@ -1,0 +1,19 @@
+<footer id="footer">
+
+		<div id="footer-left-section">
+			<p>
+				#if ($footer-LeftSection)
+					$footer-LeftSection
+				#end
+			</p>
+		</div>
+
+		<div id="footer-right-section">
+        	<p>
+        		#if ($footer-RightSection)
+					$footer-RightSection
+				#end
+    		</p>
+		</div>
+
+</footer>

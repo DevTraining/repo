@@ -1,0 +1,90 @@
+.aui{
+body.skin-pink {
+  color: #513c50;
+  background: url(../../images/custom/color_schemes/skin-pink/bg-body.png) repeat;
+}
+h1.skin-skin-pink ,
+h2.skin-pink ,
+h3.skin-pink ,
+h4.skin-pink ,
+h5.skin-pink ,
+h6.skin-pink {
+  color: #342633;
+}
+hr.skin-pink  {
+  background-color: #e5d6e4;
+}
+input.skin-pink , textarea.skin-pink {
+  border-color: #d5bdd4 #e5d6e4 #e5d6e4 #d5bdd4;
+  color: #555555;
+}
+/* 1.2 Hyperlinks */
+a.skin-pink {
+  color: #b134b0;
+}
+.skin-pink a:hover {
+  color: #8f128e;
+}
+/* 2.1 Containers & Columns */
+.skin-pink #content-wrap {
+  border-bottom: 1px solid  #d1b7cf;
+}
+.skin-pink #widgets-footer-wrap {
+  background: url(../../images/custom/color_schemes/skin-pink/bg-footer.png) repeat;
+  border-bottom: 1px solid #d1b7cf;
+  border-top: 1px solid #ffffff;
+}
+/* 2.2 Navigation */
+.skin-pink #navigation a {
+  border-color: transparent #c6d3db transparent #ffffff;
+  color: #8c678a;
+  text-shadow: 0 1px 0 #ffffff;
+}
+.skin-pink #navigation ul a:hover {
+ color: #251b25;
+}
+.skin-pink #navigation li.selected a
+{
+   color: #251b25;
+}
+/* Optional Styling */
+.skin-pink #navigation {
+  border: 1px solid  #dbc6da;
+  background: #ffffff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f4e9f4));
+  background: -webkit-linear-gradient(#ffffff, #f4e9f4);
+  background: -moz-linear-gradient(center top, #ffffff 0%, #f4e9f4 100%);
+  background: -moz-gradient(center top, #ffffff 0%, #f4e9f4 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ffffff,endColorstr=#f4e9f4);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ffffff, endColorstr=#f4e9f4)";
+}
+/* 2.2.1 Drop-down menus */
+
+.skin-pink #navigation .child-menu{ 
+		
+  		background: #fdfdfd;
+  		border-color: #dbc6da;
+		li a {
+			  color: #8c678a;
+		}
+		
+	}
+	
+.skin-pink #header-wrap {
+   border-bottom: 1px solid #d1b7cf;
+   border-top: 3px solid #292329;
+}
+.skin-pink #footer {
+ color: #6e526d;
+}
+.skin-pink #footer p {
+   color: #8c678a;
+}
+.skin-pink #widgets-footer{
+  border-bottom: 1px solid #d1b7cf;
+  box-shadow: 0 1px 0 0 #ffffff;
+  -webkit-box-shadow: 0 1px 0 0 #ffffff;
+  -moz-box-shadow: 0 1px 0 0 #ffffff;
+  -o-box-shadow: 0 1px 0 0 #ffffff;
+}
+}

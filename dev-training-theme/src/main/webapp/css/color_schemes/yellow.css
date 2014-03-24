@@ -1,0 +1,90 @@
+.aui{
+body.skin-yellow {
+  color: #51513c;
+  background: url(../../images/custom/color_schemes/skin-yellow/bg-body.png) repeat;
+}
+h1.skin-yellow ,
+h2.skin-yellow ,
+h3.skin-yellow ,
+h4.skin-yellow ,
+h5.skin-yellow ,
+h6.skin-yellow {
+  color: #343426;
+}
+hr.skin-yellow {
+  background-color: #e5e4d6;
+}
+input.skin-yellow , textarea.skin-yellow {
+  border-color: #d5d4bd #e5e4d6 #e5e4d6 #d5d4bd;
+  color: #555555;
+}
+/* 1.2 Hyperlinks */
+a.skin-yellow {
+  color: #adb134;
+}
+.skin-yellow a:hover {
+  color: #8b8f12;
+}
+/* 2.1 Containers & Columns */
+.skin-yellow #content-wrap {
+  border-bottom: 1px solid #d1cfb7;
+}
+.skin-yellow #widgets-footer-wrap {
+  background: url(../../images/custom/color_schemes/skin-yellow/bg-footer.png) repeat;
+  border-bottom: 1px solid #d1cfb7;
+  border-top: 1px solid #ffffff;
+}
+/* 2.2 Navigation */
+.skin-yellow #navigation a {
+  border-color: transparent #dbc6c6 transparent #ffffff;
+  color: #8c8c67;
+  text-shadow: 0 1px 0 #ffffff;
+}
+.skin-yellow #navigation ul a:hover {
+  color: #25251b;
+}
+.skin-yellow #navigation li.selected a{
+  color: #25251b;
+}
+/* Optional Styling */
+.skin-yellow #navigation {
+  border: 1px solid #dbdac6;
+  background: #ffffff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f4f3e9));
+  background: -webkit-linear-gradient(#ffffff, #f4f3e9);
+  background: -moz-linear-gradient(center top, #ffffff 0%, #f4f3e9 100%);
+  background: -moz-gradient(center top, #ffffff 0%, #f4f3e9 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ffffff,endColorstr=#f4f3e9);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ffffff, endColorstr=#f4f3e9)";
+}
+/* 2.2.1 Drop-down menus */
+
+.skin-yellow #navigation .child-menu{ 
+		
+  		background: #fdfdfd;
+ 		border-color: #dbdac6;
+		li a {
+			color: #8c8c67;
+		}
+		
+	}
+	
+/* 2.3 Header */
+.skin-yellow #header-wrap {
+  border-bottom: 1px solid #d1cfb7;
+  border-top: 3px solid #292923;
+}
+.skin-yellow #footer {
+ color: #6e6e52;
+}
+.skin-yellow #footer p {
+  color: #8c8c67;
+}
+.skin-yellow #widgets-footer {
+  border-bottom: 1px solid #d1cfb7;
+  box-shadow: 0 1px 0 0 #ffffff;
+  -webkit-box-shadow: 0 1px 0 0 #ffffff;
+  -moz-box-shadow: 0 1px 0 0 #ffffff;
+  -o-box-shadow: 0 1px 0 0 #ffffff;
+}
+}

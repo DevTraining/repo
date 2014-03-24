@@ -1,0 +1,35 @@
+<footer id="widgets-footer-wrap" role="contentinfo" > 
+	<div class="aui-layout-content clearfix" id="widgets-footer">
+		<div class="aui-column aui-column-first aui-w25" id="footerSection1">
+			<div class="aui-column-content aui-column-content-first">
+				#if ($widgets-footer_section_1)
+					$widgets-footer_section_1
+				#end
+			</div>
+		</div>
+
+		<div class="aui-column aui-w25" id="footerSection2">
+			<div class="aui-column-content">			
+					#if ($widgets-footer_section_2)
+						$widgets-footer_section_2
+					#end
+			</div>
+		</div>
+
+		<div class="aui-column aui-w25" id="footerSection3">
+			<div class="aui-column-content">
+				#if ($widgets-footer_section_3)
+					$widgets-footer_section_3
+				#end
+			</div>
+		</div>
+
+		<div class="aui-column aui-column-last aui-w25" id="footerSection4">
+			<div class="aui-column-content aui-column-content-last">
+				#if ($widgets-footer_section_4)
+					$widgets-footer_section_4
+				#end
+			</div>
+		</div>
+	</div>
+</footer>

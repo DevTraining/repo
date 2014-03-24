@@ -1,0 +1,92 @@
+.aui{
+body.skin-green {
+  color: #48513c;
+  background: url(../../images/custom/color_schemes/skin-green/bg-body.png) repeat;
+}
+h1.skin-green ,
+h2.skin-green ,
+h3.skin-green ,
+h4.skin-green ,
+h5.skin-green ,
+h6.skin-green  {
+  color: #2e3426;
+}
+hr.skin-green  {
+  background-color: #dfe5d6;
+}
+input.skin-green , textarea.skin-green  {
+  border-color: #ccd5bd #dfe5d6 #dfe5d6 #ccd5bd;
+  color: #555555;
+}
+/* 1.2 Hyperlinks */
+a.skin-green  {
+  color: #78b134;
+}
+.skin-green a:hover {
+  color: #568f12;
+}
+/* 2.1 Containers & Columns */
+.skin-green #content-wrap {
+  border-bottom: 1px solid #c7d1b7;
+}
+.skin-green #widgets-footer-wrap {
+  background: url(../../images/custom/color_schemes/skin-green/bg-footer.png) repeat;
+  border-bottom: 1px solid #c7d1b7;
+  border-top: 1px solid #ffffff;
+}
+
+/* 2.2 Navigation */
+.skin-green #navigation a {
+  border-color: transparent #c6d3db transparent #ffffff;
+  color:  #7c8c67;
+  text-shadow: 0 1px 0 #ffffff;
+}
+.skin-green #navigation ul a:hover {
+  color: #21251b;
+}
+.skin-green #navigation li.selected a
+{
+  color: #21251b;
+}
+/* Optional Styling */
+.skin-green #navigation {
+  border: 1px solid #d3dbc6;
+  background: #ffffff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#eff4e9));
+  background: -webkit-linear-gradient(#ffffff, #eff4e9);
+  background: -moz-linear-gradient(center top, #ffffff 0%, #eff4e9 100%);
+  background: -moz-gradient(center top, #ffffff 0%, #eff4e9 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ffffff,endColorstr=#eff4e9);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ffffff, endColorstr=#eff4e9)";
+}
+/* 2.2.1 Drop-down menus */
+
+.skin-green #navigation .child-menu{ 
+		
+  		background: #fdfdfd;
+  		border-color: #d3dbc6;
+		li a {
+			 color: #7c8c67;
+		}
+		
+	}
+	
+.skin-green #header-wrap {
+  border-bottom: 1px solid #c7d1b7;
+  border-top: 3px solid #262923;
+
+}
+.skin-green #footer {
+ color: #626e52;
+}
+.skin-green #footer p {
+   color: #7c8c67;
+}
+.skin-green #widgets-footer {
+  border-bottom: 1px solid #c7d1b7;
+  box-shadow: 0 1px 0 0 #ffffff;
+  -webkit-box-shadow: 0 1px 0 0 #ffffff;
+  -moz-box-shadow: 0 1px 0 0 #ffffff;
+  -o-box-shadow: 0 1px 0 0 #ffffff;
+}
+}
