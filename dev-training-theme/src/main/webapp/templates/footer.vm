@@ -1,9 +1,15 @@
-<footer id="footer">
 
+
+<footer id="footer">
+<a href="http://localhost:8080/web/guest/welcome">Welcome</a> |  <a href="http://localhost:8080/web/guest/about">About</a> | <a href="http://localhost:8080/web/guest/terms-of-use">Terms of Use</a> | <a href="http://localhost:8080/web/guest/privacy-statement">Privacy Statement</a> | <a href="http://localhost:8080/web/guest/contact-us">Contact Us</a> 
+		
+		
 		<div id="footer-left-section">
 			<p>
 				#if ($footer-LeftSection)
 					$footer-LeftSection
+
+  About | Terms of Use | Privacy Statement | Contact Us 
 				#end
 			</p>
 		</div>
@@ -12,6 +18,7 @@
         	<p>
         		#if ($footer-RightSection)
 					$footer-RightSection
+					  عن البوابة | شروط الاستخدان | الخصوصية | تواصل معنا
 				#end
     		</p>
 		</div>

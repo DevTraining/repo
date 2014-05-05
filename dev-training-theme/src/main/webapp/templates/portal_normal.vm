@@ -131,6 +131,9 @@ $theme.include($body_top_include)
 	#if ($theme_settings.display-footer == true)
 		#parse ("$full_templates_path/footer.vm")
 	#end
+
+	#parse ("$full_templates_path/footer.vm")
+	
 </div>
 
 $theme.include($body_bottom_include)
@@ -138,5 +141,7 @@ $theme.include($body_bottom_include)
 </body>
 
 $theme.include($bottom_include)
+
+
 
 </html>
